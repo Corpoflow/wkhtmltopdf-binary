@@ -1,6 +1,6 @@
 {
     "name": "corpoflow/wkhtmltopdf-binary",
-    "description": "Provides binaries for different OS's and architectures",
+    "description": "Provides WkHtmlToPdf binaries for different OS's and architectures",
     "license": "MIT",
     "authors": [
         {

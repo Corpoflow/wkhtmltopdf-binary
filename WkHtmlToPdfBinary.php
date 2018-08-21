@@ -20,14 +20,14 @@ class WkHtmlToPdfBinary {
         if ($binary === false) {
 
             # Check if we're on x32 or x64
-            $architecture = PHP_INT_SIZE == 4 ? 'i386' : 'amd64';
+            $architecture = PHP_INT_SIZE == 4 ? '32' : '64';
 
             switch (strtolower(PHP_OS)) {
                 case 'linux': # Linux
                     $binary = 'wkhtmltopdf-linux-' . $architecture;
                     break;
                 case 'windows': # Windows
-                    $binary = 'wkhtmltopdf-windows-' . $architecture;
+                    $binary = 'wkhtmltopdf-windows-' . $architecture . '.exe';
                     break;
                 default: # Always fallback to linux x64
                     $binary = 'wkhtmltopdf-linux-amd64';
